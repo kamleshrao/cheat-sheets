@@ -37,6 +37,12 @@ PRAGMA TABLE_INFO(employees);
 select * from employees;
 ```
 
+- To exit SQLite prompt
+
+```
+.quit
+```
+
 GUI Editor: 
 
 http://sqlitestudio.pl/

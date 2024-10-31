@@ -7,6 +7,8 @@ These commands will work with any Tools/Products which is based on Git (E.g. Git
 ## Installation
 ### GitHub for Windows
 https://windows.github.com
+### GitHub for Linux/Ubuntu
+`sudo apt install git`
 ### GitHub for Mac
 https://mac.github.com
 ### Git for All Platforms
@@ -19,7 +21,7 @@ Use the below commands from command line (Windows/Unix/Max) to configure User In
 ### Sets the email you want attached to your commit transactions 
 `git config --global user.email "[email address]"`
 ### Enables helpful colorization of command line output 
-`it config --global color.ui auto`
+`git config --global color.ui auto`
 
 ### Example of above commands
 ```
@@ -37,7 +39,25 @@ git config --global color.ui
 
 ## SSL Setup for Git
 ### Steps to follow, if you are using GitHub
-- TBD ############################################
+- Open Git Bash and type following command
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+- Press enter keys for all questions. This will select the default options, without password.
+- Add SSH Key to GitHub Account.
+- Open the `id_ed25519.pub` file from `.ssh` folder in a text edit.  Copy its contents.
+- Login to GitHub. Goto Settings -> SSG and GPG Keys
+- Add New SSH Key.  Give name of Laptop to easily remember.
+- Test the SSH 
+```
+ssh -T git@github.com
+```
+- Type "yes" for the above question
+- Try git clone SSH-RepositoryLink
+
+Source: https://kinsta.com/blog/generate-ssh-key/
+
+
 ### Steps to follow, if you are using BitBucket
 - TBD ############################################
 

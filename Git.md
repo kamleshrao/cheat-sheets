@@ -85,6 +85,13 @@ Synchronize your local repository with the remote repository on GitHub.com
 ### Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. `git pull` is a combination of `git fetch` and `git merge`
 `git pull`
 
+### Example - If you want push changes to GitHub from your Local Repo (assuming you are using default branch)
+```
+git add .
+git commit -m "commit message here"
+git push
+```
+
 ## Branches 
 Branches are an important part of working with Git. Any commits you make will be made on the branch you're currently “checked out” to. Use `git status` to see which branch that is.
 ### Creates a new branch

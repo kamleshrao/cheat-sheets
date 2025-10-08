@@ -14,3 +14,17 @@ Get-WmiObject -Class Win32_PhysicalMemoryArray | Select-Object MaxCapacity, Memo
 wmic memphysical get maxcapacity
 ```
 *MaxCapacity*: Shows the maximum supported memory in kilobytes (divide by 1024 to get MB, or 1048576 for GB).
+
+## Tasks post fresh installation of Ubuntu
+
+### Vi Editor - Line Numbers
+Add line numbers to vi editor 
+```
+vi .exrc
+se nu
+```
+
+### If using VMWare virtual machine, enable clipboard
+```
+sudo apt install open-vm-tools open-vm-tools-desktop
+```
